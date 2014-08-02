@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Run CLI" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="D:/prog/nodejs/node" path-to-js-file="cli.js" application-parameters="--source-path c:\temp\imtest --dest-path c:\temp\imtest.out --max-width 420 --max-height 600 --min-size-reduction 30 --quality 20 --direct-color-bit-depth 4 --indexed-color-bit-depth 5 --force-png-to-indexed --verbose" working-dir="$PROJECT_DIR$">
+  <configuration default="false" name="Run CLI" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="D:/prog/nodejs/node" path-to-js-file="cli.js" application-parameters="--source-path c:\temp\imtest --dest-path c:\temp\imtest.out --max-width 420 --max-height 600 --min-size-reduction 30 --quality 20 --direct-color-bit-depth 4 --indexed-color-bit-depth 5 --force-png-to-indexed --jpeg-blur 2 --verbose" working-dir="$PROJECT_DIR$">
     <envs>
       <env name="PATH" value="D:\prog\graphicsmagick-1.3.19" />
     </envs>
