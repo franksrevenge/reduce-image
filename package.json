@@ -1,0 +1,33 @@
+{
+    "name"          : "reduce-image",
+    "version"       : "0.0.1",
+    "description"   : "Lossy recompression and resizing tool for images when file size is more important than quality",
+    "author"        : "Aleksi Asikainen <aleksi.asikainen@gmail.com>",
+    "license"       : "Apache-2.0",
+    "repository" : {
+            "type"      : "git",
+            "url"       : "https://github.com/franksrevenge/reduce-image"
+    },
+    "bugs" : {
+            "url"       : "https://github.com/franksrevenge/reduce-image/issues"
+    },
+    "keywords" : [
+        "image",
+        "compression",
+        "compress",
+        "reduction",
+        "reduce",
+        "png",
+        "jpeg",
+        "jpg",
+        "gif",
+        "svg"
+    ],
+    "dependencies" : {
+		"cp"					: "0.1.x",
+		"file-size"				: "0.0.x",
+        "gm"                    : "1.16.x",
+        "minimist"              : "0.2.x",
+		"mkdirp"				: "0.5.x"
+    }
+}
