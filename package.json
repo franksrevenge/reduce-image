@@ -1,6 +1,6 @@
 {
     "name"          : "reduce-image",
-    "version"       : "0.0.1",
+    "version"       : "0.0.2",
     "description"   : "Lossy recompression and resizing tool for images when file size is more important than quality",
     "author"        : "Aleksi Asikainen <aleksi.asikainen@gmail.com>",
     "license"       : "Apache-2.0",
