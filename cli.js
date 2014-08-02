@@ -1,7 +1,8 @@
 'use strict';
 
 var ImageReducer	= require( './lib/ImageReducer' ),
-	filesize		= require( 'file-size' );
+	filesize		= require( 'file-size' ),
+	moment			= require( 'moment' );
 
 
 function printHelp()
@@ -12,7 +13,7 @@ function printHelp()
 			'    [--force-direct-color-output-format jpg|png|webp] \\\n' +
 			'    [--force-indexed-color-output-format gif|png|webp] \\\n' +
 			'    [--direct-color-bit-depth 8|15|16|18|24] [--indexed-color-bit-depth 1-8] \\\n' +
-			'    [--force-png-indexed] [--force-png-to-jpg] [--verbose]\n' +
+			'    [--force-png-to-indexed] [--force-png-to-jpg] [--recursive] [--verbose]\n' +
 			'\n' +
 			'See README.md for details.'
 		);
@@ -53,7 +54,8 @@ function runCli()
 		throw new Error( "'force-png-to-indexed' and 'force-png-to-jpg' options may not be used together" );
     }
 
-	var imageReducer = new ImageReducer( argv );
+	var imageReducer	= new ImageReducer( argv );
+	var startTime		= Date.now();
 
 
 	imageReducer.run(
@@ -66,7 +68,7 @@ function runCli()
 				}
 
 				console.log(
-						'Scan complete\n\n' +
+						'\n############### SCAN COMPLETE ###############\n\n' +
 						'FILES\n' +
 						'    * Scanned:    ' + stats.files.total + '\n' +
 						'    * Optimized:  ' + stats.files.optimized + '\n' +
@@ -79,8 +81,13 @@ function runCli()
 						'\n' +
 						'SAVING\n' +
 						'    * Bytes:      ' + filesize( stats.data.original - stats.data.optimized ).human( { jedec: true } ) + '\n' +
-						'    * Percentage: ' + ( ( stats.data.optimized / stats.data.original ) * 100 ).toFixed( 2 ) + '%\n' +
+						'    * Percentage: ' + ( ( stats.data.optimized / stats.data.original ) * 100 ).toFixed( 2 ) + '% of original\n' +
 						'    * Ratio:      ' + ( ( stats.data.original / stats.data.optimized ) ).toFixed( 2 ) + ':1\n' +
+						'\n' +
+						'TIME\n' +
+						'    * Time taken: ' + moment.duration( Date.now() - startTime ).humanize() + '\n' +
+						'    * Processing:  ' +
+								( ( stats.data.original / ( ( Date.now() - startTime ) / 1000 ) ) / 1024 / 1024 ).toFixed( 2 ) + ' MB/s\n' +
 						'\n'
 					);
 			}

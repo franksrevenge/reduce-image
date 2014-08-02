@@ -28,6 +28,7 @@
 		"file-size"				: "0.0.x",
         "gm"                    : "1.16.x",
         "minimist"              : "0.2.x",
-		"mkdirp"				: "0.5.x"
+		"mkdirp"				: "0.5.x",
+		"moment"				: "2.8.x"
     }
 }

@@ -15,7 +15,7 @@ reduce-image --source-path PATH --dest-path PATH [--max-width WIDTH] [--max-heig
     [--force-direct-color-output-format gif|jpg|png|webp] \
     [--force-indexed-color-output-format gif|jpg|png|webp] \
     [--direct-color-bit-depth 8|15|16|18|24] [--indexed-color-bit-depth 1-8] \
-    [--force-png-to-indexed] [--force-png-to-jpg] [--verbose]
+    [--force-png-to-indexed] [--force-png-to-jpg] [--recursive] [--verbose]
 ```
 
 
@@ -36,6 +36,7 @@ Option                                        | Description
 `--indexed-color-bit-depth DEPTH`             | Reduce/quantize indexed color images to `DEPTH` bits (1-8)
 `--force-png-to-indexed`                      | If specified, convert all PNG files into indexed color depth
 `--force-png-to-jpg`                          | If specified, convert all *direct color* PNG files to JPGs
+`--recursive`                                 | Scan `source-path` recursively
 `--verbose`                                   | Output more
 
 
