@@ -14,7 +14,7 @@ reduce-image --source-path PATH --dest-path PATH [--max-width WIDTH] [--max-heig
     [--min-size-reduction 0-100] [--quality 0-100] [--flexible-format] \
     [--force-direct-color-output-format gif|jpg|png|webp] \
     [--force-indexed-color-output-format gif|jpg|png|webp] \
-    [--direct-color-bit-depth 8|15|16|18|24] [--indexed-color-bit-depth 1-8] \
+    [--direct-color-bit-depth 1|2|4|8|15|16|18|24] [--indexed-color-bit-depth 1-8] \
     [--jpeg-blur 0.1-100] [--force-png-to-indexed] [--force-png-to-jpg] \
     [--recursive] [--verbose]
 ```
@@ -25,7 +25,7 @@ reduce-image --source-path PATH --dest-path PATH [--max-width WIDTH] [--max-heig
 Option                                        | Description 
 :---------------------------------------------|:-------------
 `--dest-path PATH`                            | Save processed images to `PATH`
-`--direct-color-bit-depth DEPTH`              | Reduce/quantize colors of direct color images to `DEPTH` bits (8, 15, 16, 18, 24)
+`--direct-color-bit-depth DEPTH`              | Reduce/quantize colors of direct color images to `DEPTH` bits (1, 2, 4, 8, 15, 16, 18, 24)
 `--flexibleFormat`                            | If specified, allow output file to be saved in different format if it produces a smaller file
 `--force-direct-color-output-format FORMAT`   | Save all direct color images in `FORMAT` format (gif, jpg, png, webp)
 `--force-indexed-color-output-format FORMAT`  | Save all indexed color images in `FORMAT` format (gif, jpg, png, webp)

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 'use strict';
 
 var ImageReducer	= require( './lib/ImageReducer' ),
@@ -10,9 +12,9 @@ function printHelp()
 	console.log(
 			'reduce-image --source-path PATH --dest-path PATH [--max-width WIDTH] [--max-height HEIGHT] \\\n' +
 			'    [--min-size-reduction 0-100] [--quality 0-100] [--flexible-format] \\\n' +
-			'    [--force-direct-color-output-format jpg|png|webp] \\\n' +
-			'    [--force-indexed-color-output-format gif|png|webp] \\\n' +
-			'    [--direct-color-bit-depth 8|15|16|18|24] [--indexed-color-bit-depth 1-8] \\\n' +
+			'    [--force-direct-color-output-format gif|jpg|png|webp] \\\n' +
+			'    [--force-indexed-color-output-format gif|jpg|png|webp] \\\n' +
+			'    [--direct-color-bit-depth 1|2|4|8|15|16|18|24] [--indexed-color-bit-depth 1-8] \\\n' +
 			'    [--force-png-to-indexed] [--force-png-to-jpg] [--recursive] [--verbose]\n' +
 			'\n' +
 			'See README.md for details.'
