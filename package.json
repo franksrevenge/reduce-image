@@ -1,9 +1,10 @@
 {
     "name"          : "reduce-image",
-    "version"       : "0.0.3",
+    "version"       : "0.0.4",
     "description"   : "Lossy recompression and resizing tool for images when file size is more important than quality",
     "author"        : "Aleksi Asikainen <aleksi.asikainen@gmail.com>",
     "license"       : "Apache-2.0",
+	"main"			: "./lib/ImageReducer.js",
     "repository" : {
             "type"      : "git",
             "url"       : "https://github.com/franksrevenge/reduce-image"
@@ -20,6 +21,9 @@
         "compress",
         "reduction",
         "reduce",
+		"optimize",
+		"optimization",
+		"lossy",
         "png",
         "jpeg",
         "jpg",
